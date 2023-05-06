@@ -1,8 +1,10 @@
+/* 반지름 공식 : 원의 둘레 /2 / 3.14 */
+
 const center = document.querySelector('.list-item');
 
 const items = document.querySelectorAll('.list-item li');
 
-const radius = (items[0].offsetWidth * items.length) / 3.14 / 2;
+const radius = (items[0].offsetWidth * items.length) / 3.14 / 2.2;
 
 items.forEach((item, index) => {
   item.style.transform = `rotateY(${
