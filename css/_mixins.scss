@@ -1,0 +1,23 @@
+// ✅ font
+// ! parameter의 기본 값 자바스크립트에서는 '=' Scss에서는 ': '
+@mixin font($type: null, $align: left, $color: inherit) {
+  color: $color;
+  text-align: $align;
+  @content;
+
+  @if $type ==title {
+    font-weight: 700;
+    // ! 폰트에 따라 bold 등 해당하는 값을 주세요.
+    font-size: 24px;
+  } @else if $type==sub-title {
+    font-weight: 400;
+    font-size: 12px;
+  } @else if $type==content {
+    font-size: 14px;
+  } @else if $type==desc {
+    font-weight: 500;
+    font-size: 12px;
+  } @else {
+    font-size: 14px;
+  }
+}
